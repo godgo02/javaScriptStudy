@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Math:style</title>
+        <style>
+            body{
+                font: 12px "나눔고딕";
+            }
+            #wrap{
+                position: relative;
+                width: 700px;
+                height: 500px;
+                background: #0CF;
+            }
+            #box{
+                position: absolute;
+                left: 0px;
+                top: 200px;
+                width: 50px;
+                height: 50px;
+                background: yellow;
+            }
+            button{
+                width: 100px;
+                height: 30px;
+                margin: 10px;
+                background-color: red;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <button id="play">play</button>
+            <button id="stop">stop</button>
+            <p id="box"></p>
+        </div>
+        <script>
+            const PLAY = document.querySelector('#play');
+            const STOP = document.querySelector('#stop');
+            var a = 0;
+            function move(){
+                a+=1;
+                document.getElementById('box').style.left=a+'px';
+            }
+
+            function play(){
+                pMove = setInterval('move()',10);
+            }
+            function stop(){
+                pStop = clearInterval(pMove);
+            }
+
+            PLAY.addEventListener('click',play);
+            STOP.addEventListener('click',stop);
+
+
+        </script>
+    </body>
+</html>

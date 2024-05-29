@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var pens = ['red','blue','green','orange'];
+            console.log('기존의배열 :',pens);
+            pens.reverse();
+            console.log('변경된 배열 : ',pens);
+
+            pens.shift();
+            console.log(pens);
+            pens.unshift('pink','brown');
+            console.log(pens);
+
+            pens.pop();
+            console.log(pens);
+            pens.push('pink','sky');
+            console.log(pens);
+
+            pens.splice(1);
+            console.log(pens);
+            pens.splice(1,2);
+            console.log(pens);
+            pens.splice(1,2,'apple','number');
+            console.log(pens);
+        </script>
+    </body>
+</html>

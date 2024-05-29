@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+        //class
+        class Book{
+            //생성자
+            constructor(a,b,c){
+                this.a = a; // 멤버변수
+                this.b = b;
+                this.c = c;
+            }
+            //메소드
+            list(){
+                console.log(`${this.a} : ${this.b}`);
+            }
+        }
+
+        var b1 = new Book(1,2,3);
+        var b2 = new Book(4,5,6);
+
+        b1.list();
+        b2.list();
+
+        </script>
+    </body>
+</html>

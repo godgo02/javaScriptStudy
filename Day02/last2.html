@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/gallery1.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section>
+            <h1>Slide Gallary</h1>
+            <p id="prev"><img src="img/prev.png"></p>
+            <p id="next"><img src="img/next.png"></p>
+            <div id="view">
+                <ul id="source">
+                    <li><img src="img/pic01.jpg"></li>
+                    <li><img src="img/pic02.jpg"></li>
+                    <li><img src="img/pic03.jpg"></li>
+                    <li><img src="img/pic04.jpg"></li>
+                    <li><img src="img/pic05.jpg"></li>
+                </ul>
+            </div>
+        </section>
+        <script>
+            $(function(){
+                var count = 0;
+                $('li:not(:eq('+count+'))').hide();
+                $('#next').on('click',function(){
+                    if(count == 4){
+                        $('li:eq('+ count +')').hide();
+                        count = -1;    
+                    }
+                    else{
+                        $('li:eq('+ count +')').hide();
+                    }
+                    $('#next,#prev').hide();
+                    $('li:eq('+ ++count +')').show();
+                    console.log($('li'));
+                    $('#source').animate({marginLeft:'-=0px'},300,'swing',function(){
+                        $('#next,#prev').show();
+                    });
+                    
+                });
+                $('#prev').on('click',function(){
+                    $('#next,#prev').hide();
+                    if(count == 0){
+                        $('li:eq('+ count +')').hide();
+                        count = 5;
+                    }
+                    else{
+                        $('li:eq('+ count +')').hide();
+                    }
+                    $('li:eq('+ --count +')').show();
+                    $('#source').animate({marginLeft:'+=0'},300,'swing',function(){
+                        $('#next,#prev').show();
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

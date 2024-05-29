@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/gallery.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section>
+            <h1>Slide Gallary</h1>
+            <p id="prev"><img src="img/prev.png"></p>
+            <p id="next"><img src="img/next.png"></p>
+            <div id="view">
+                <ul id="source">
+                    <li><img src="img/pic01.jpg"></li>
+                    <li><img src="img/pic02.jpg"></li>
+                    <li><img src="img/pic03.jpg"></li>
+                    <li><img src="img/pic04.jpg"></li>
+                    <li><img src="img/pic05.jpg"></li>
+                </ul>
+            </div>
+        </section>
+        <script>
+            $(function(){
+                $('#source>li:last').prependTo('#source');
+                $('#source').css('margin-left','-400px');
+                $('#next').on('click',function(){
+                    $('#next,#prev').hide();
+                    $('#source').animate({marginLeft:'-=400px'},300,'swing',function(){
+                        console.log('next');
+                        $('#source>li:first').appendTo('#source');
+                        $('#source').css('margin-left','-400px');
+                        $('#next,#prev').show();
+                    });
+                });
+                $('#prev').on('click',function(){
+                    $('#next,#prev').hide();
+                    $('#source').animate({marginLeft:'+=400px'},300,'swing',function(){
+                        console.log('prev');
+                        $('#source>li:last').prependTo('#source');
+                        $('#source').css('margin-left','-400px');
+                        $('#next,#prev').show();
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button id="btn1">wrap</button>
+        <button id="btn2">replaceWith</button>
+        <button id="btn3">remove</button>
+        <p id="test">안녕하세요.</p>
+        <script>
+            $(function(){
+                $('#btn1').click(function(){
+                    $('#test').wrap('<div>');
+                });
+                $('#btn2').click(function(){
+                    $('#test').replaceWith('<h1>잘가세요.</h1>')
+                });
+                $('#btn3').click(function(){
+                    $('h1').remove();
+                });
+            });
+        </script>
+    </body>
+</html>

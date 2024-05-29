@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button id="btn1">text수정</button>
+        <button id="btn2">text가져오기</button>
+        <button id="btn3">HTML수정</button>
+        <button id="btn4">HTML가져오기</button>
+        <p id="test"></p>
+        <script>
+            $(function(){
+                $('#btn1').click(function(){
+                    $('#test').text('수업시작');
+                });
+                $('#btn2').click(function(){
+                    var t =$('#test').text();
+                    console.log(t);
+                });
+                $('#btn3').click(function(){
+                    $('#test').html('<b>안녕하세요.</b>');
+                });
+                $('#btn4').click(function(){
+                    var h = $('#test').html();
+                    console.log(h);
+                });
+            });
+        </script>
+    </body>
+</html>

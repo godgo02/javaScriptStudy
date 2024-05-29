@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button type="button">sample</button>
+        <div></div>
+        <p></p>
+        <script>
+            //즉시실행 -> 웹 실행하면 바로 실행
+            $(function(){
+                $('div').text('jquery시작'); //div태그 안에 jquery 시작 추가
+                //태그 button이 클릭이 되면 실행되는 함수 선언
+                $('button').click(function(e){
+                    //p태그에 welcome 넣고 css는 color 빨간색으로 설정
+                    $('p').text('welcome').css('color','red');
+                });
+            });
+        </script>
+    </body>
+</html>

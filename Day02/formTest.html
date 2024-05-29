@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p><input type="text"><span>focus fire</span></p>
+        <p><input type="password"><span>focus fire</span></p>
+        <script>
+            $(function(){
+                $('input').on('focus',function(e){
+                    $(this).next('span')
+                        .css('display','inline')
+                        .delay(800)
+                        .fadeOut(1000);
+                })
+            })
+        </script>
+    </body>
+</html>

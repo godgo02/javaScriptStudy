@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="box_01">
+            <p class="button">click</p>
+            <p class="back">fksdjflskdfjlk</p>
+        </div>
+        <div id="box_02">
+            <p class="button">click</p>
+            <p class="back">sdfjklsajdflkdsjaf</p>
+        </div>
+        <div id="box_03">
+            <p class="button">click</p>
+            <p class="back">asdjflksajdlfkjlsadf</p>
+        </div>
+        <script>
+           $('div#box_01>.button').click(function(e){
+            $(this).next('p').css('background','red');
+           })
+           $('div#box_02>.button').click(function(e){
+            $(this).siblings('p').css('background','yellow');
+           })
+           $('div#box_03>.button').click(function(e){
+            $(this).parent('div').css('background','pink');
+           })
+        </script>
+    </body>
+</html>

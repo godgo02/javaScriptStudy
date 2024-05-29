@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var object = new Object();
+            object.name = "홍길동";
+            object.age = "20";
+            object.run = function(){
+                console.log('달린다.');
+            }
+
+            console.log(object.name);
+            console.log(object.age);
+            console.log(object.run());
+
+            var temp ={
+                name : '호랑이',
+                age : 25,
+                run : function(){
+                    console.log('달린다.');
+                }
+            }
+
+            console.log(temp);
+            console.log(temp.age);
+            console.log(temp.run());
+        </script>
+    </body>
+</html>

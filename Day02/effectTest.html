@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button id="btn1">show</button>
+        <button id="btn2">hide</button>
+        <button id="btn3">toggle</button>
+        <button id="btn4">slideDown</button>
+        <button id="btn5">slideUp</button>
+        <button id="btn6">fadeIn</button>
+        <button id="btn7">fadeout</button>
+        <p id="test">안녕하세요.</p>
+        <script>
+            $(function(){
+                $('#btn1').click(function(){
+                    $('#test').show(500);
+                });
+                $('#btn2').click(function(){
+                    $('#test').hide(500);
+                });
+                $('#btn3').click(function(){
+                    $('#test').toggle(500);
+                });
+                $('#btn4').click(function(){
+                    $('#test').slideDown(500);
+                });
+                $('#btn5').click(function(){
+                    $('#test').slideUp(500);
+                });
+                $('#btn6').click(function(){
+                    $('#test').fadeIn(500);
+                });
+                $('#btn7').click(function(){
+                    $('#test').fadeOut(500);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+        <style>
+            ul{
+                list-style: none;
+            }
+            li{
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <ul>
+                <li><img src="../Day01/images/tree-1-thumb.jpg"></li>
+                <li><img src="../Day01/images/tree-2-thumb.jpg"></li>
+                <li><img src="../Day01/images/tree-3-thumb.jpg"></li>
+                <li><img src="../Day01/images/tree-4-thumb.jpg"></li>
+            </ul>
+            <button id="prev">앞으로</button>
+            <button id="next">뒤로</button>
+        </div>
+        <script>
+            $(function(){
+                $('#prev').click(function(e){
+                    $('ul>li:eq(3)').prependTo('ul');
+                });
+                $('#next').click(function(e){
+                    $('ul>li:eq(0)').appendTo('ul');
+                });
+            })
+        </script>
+    </body>
+</html>

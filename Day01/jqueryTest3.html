@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p><button id="btn_01">Click Me</button></p>
+        <ul id="list1">
+            <li><img src="images/tree-1-thumb.jpg" width="150"></li>
+            <li><img src="images/tree-2-thumb.jpg" width="150"></li>
+            <li><img src="images/tree-3-thumb.jpg" width="150"></li>
+            <li><img src="images/tree-4-thumb.jpg" width="150"></li>
+            <li><img src="images/tree-5-thumb.jpg" width="150"></li>
+            <li><img src="images/tree-6-thumb.jpg" width="150"></li>
+        </ul>
+        <script>
+            $(function(){
+                $('#btn_01').click(function(e){
+                    $('ul>li:eq(2)').css('border','2px solid red');
+                    $('ul>li:lt(2)').css('border','2px solid yellow');
+                    $('ul>li:gt(2)').css('border','2px solid blue');
+
+                    $('ul>li:odd').css('background-color','#666');
+                    $('ul>li:even').css('background-color','green');
+                });
+            });
+        </script>
+    </body>
+</html>

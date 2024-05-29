@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            var divDom = document.querySelector('div');
+
+            for(i = 1; i<=6; i++){
+                var IMG = document.createElement('img');
+                IMG.setAttribute('src',`images/tree-${i}-thumb.jpg`);
+                divDom.append(IMG);
+            }
+        </script>
+    </body>
+</html>

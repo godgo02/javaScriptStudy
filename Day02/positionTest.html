@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+        <style>
+            #back{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: rgba(0, 0, 0,0.5);
+                display: none;
+            }
+            #main{
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+            <ul>
+                <li><a href="../Day01/images/tree-1-thumb.jpg" class="modal"><img src="../Day01/images/tree-1-thumb.jpg"></a></li>
+                <li><a href="../Day01/images/tree-2-thumb.jpg" class="modal"><img src="../Day01/images/tree-2-thumb.jpg"></a></li>
+                <li><a href="../Day01/images/tree-3-thumb.jpg" class="modal"><img src="../Day01/images/tree-3-thumb.jpg"></a></li>
+                <li><a href="../Day01/images/tree-4-thumb.jpg" class="modal"><img src="../Day01/images/tree-4-thumb.jpg"></a></li>
+                <li><a href="../Day01/images/tree-5-thumb.jpg" class="modal"><img src="../Day01/images/tree-5-thumb.jpg"></a></li>
+                <li><a href="../Day01/images/tree-6-thumb.jpg" class="modal"><img src="../Day01/images/tree-6-thumb.jpg"></a></li>
+            </ul>
+        <script>
+            $(function(){
+                $('body').append('<div id="back"></div><div id="main"></div>');
+
+                $('ul>li>a.modal').on('click',function(e){
+                    var pic = $(this).attr('href');
+                    console.log(pic);
+                    $('#back').show();
+                    $('#main').show().html('<img src="'+pic+'">');
+                    var picWidth = $('#main').width()/2;
+                    var picHight = $('#main').height()/2;
+                    $('#main').css({marginLeft:'-'+picWidth+'px',marginTop:'-'+picHight+'px'});
+                    return false;
+                });
+
+                $('#back').on('click',function(e){
+                    $('#back').hide();
+                    $('#main').hide();
+                });
+            })
+        </script>
+    </body>
+</html>

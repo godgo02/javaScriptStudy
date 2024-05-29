@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function Test(a,b){
+                this.a = a;
+                this.b = b;
+            }
+            Test.prototype.run = function(){
+                console.log('달린다');
+            }
+            Test.prototype.walk = function(){
+                console.log('걷는다');
+            }
+
+            var t1 = new Test(1,2);
+            t1.run();
+            t1.walk();
+
+        </script>
+    </body>
+</html>

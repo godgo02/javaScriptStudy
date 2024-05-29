@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <ul>
+            <li class="num01"></li>
+            <li class="num02"></li>
+            <li class="num03"></li>
+        </ul>
+        <script>
+            document.querySelector('ul>li:nth-child(1)').classList.add('sub');
+            document.querySelector('ul>li:nth-child(2)').classList.remove('num02');
+            const check=document.querySelector('ul>li:nth-child(3)').classList.contains('num03');
+            console.log(check);
+        </script>
+    </body>
+</html>
